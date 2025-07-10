@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasa Joki Valorant - eeve.boosting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f1923;
+      color: white;
+    }
+    header {
+      background-color: #ff4655;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .price-list {
+      background: #1c1f26;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .price-list h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    .price-item {
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .qris {
+      text-align: center;
+    }
+    .qris img {
+      max-width: 250px;
+      margin-top: 1rem;
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: #1c1f26;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .form-section input, .form-section select, .form-section button {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .form-section button {
+      background-color: #ff4655;
+      color: white;
+      cursor: pointer;
+    }
+    .form-section button:hover {
+      background-color: #e03a48;
+    }
+    footer {
+      background-color: #1c1f26;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>eeve.boosting - Joki Valorant</h1>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2>Tentang Kami</h2>
+      <p>Kami menyediakan jasa joki akun Valorant dengan winrate tinggi, aman, terpercaya, dan cepat. Cocok untuk kamu yang ingin naik rank tanpa ribet.</p>
+    </section>
+
+    <section class="section price-list">
+      <h2>Harga Jasa Joki</h2>
+      <div class="price-item"><span>Iron - Bronze</span><span>Rp 50.000</span></div>
+      <div class="price-item"><span>Silver - Gold</span><span>Rp 60.000</span></div>
+      <div class="price-item"><span>Gold - Platinum</span><span>Rp 70.000</span></div>
+      <div class="price-item"><span>Platinum - Diamond</span><span>Rp 90.000</span></div>
+      <div class="price-item"><span>Immortal+</span><span>Rp 130.000</span></div>
+    </section>
+
+    <section class="section form-section">
+      <h2>Form Pemesanan</h2>
+      <form id="orderForm">
+        <input type="text" id="nickname" placeholder="Nickname Valorant" required />
+        <select id="rankAwal">
+          <option disabled selected>Rank Awal</option>
+          <option>Iron</option>
+          <option>Bronze</option>
+          <option>Silver</option>
+          <option>Gold</option>
+          <option>Platinum</option>
+          <option>Diamond</option>
+          <option>Immortal</option>
+        </select>
+        <select id="rankTujuan">
+          <option disabled selected>Rank Tujuan</option>
+          <option>Bronze</option>
+          <option>Silver</option>
+          <option>Gold</option>
+          <option>Platinum</option>
+          <option>Diamond</option>
+          <option>Immortal</option>
+          <option>Radiant</option>
+        </select>
+        <input type="text" id="whatsapp" placeholder="Nomor WhatsApp Anda" required />
+        <button type="button" onclick="kirimWhatsApp()">Kirim Pemesanan</button>
+      </form>
+    </section>
+
+    <section class="section qris">
+      <h2>Pembayaran via QRIS</h2>
+      <p>Scan QR di bawah ini untuk melakukan pembayaran.</p>
+      <img src="qris-placeholder.png" alt="QRIS Payment" />
+    </section>
+
+    <section class="section">
+      <h2>Kontak</h2>
+      <p>Instagram: <a href="https://instagram.com/eeve.boosting" style="color: #ff4655;">@eeve.boosting</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281234567890" style="color: #ff4655;">0812-3456-7890</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 eeve.boosting. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function kirimWhatsApp() {
+      const nickname = document.getElementById("nickname").value;
+      const rankAwal = document.getElementById("rankAwal").value;
+      const rankTujuan = document.getElementById("rankTujuan").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+
+      const pesan = `Halo admin eeve.boosting! Saya ingin memesan jasa joki Valorant dengan detail sebagai berikut:%0A%0ANickname: ${nickname}%0ARank Awal: ${rankAwal}%0ARank Tujuan: ${rankTujuan}%0AWhatsApp: ${whatsapp}`;
+      const url = `https://wa.me/6281234567890?text=${pesan}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
